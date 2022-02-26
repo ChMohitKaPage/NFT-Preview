@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   body{
+     border: 0;
+     padding: 0;
+     margin: 0%;
+   }
+    .container{
+      background-color: rgb(13, 26, 45);
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      background-color: rgb(13, 26, 45);
+      align-items: center;
+      justify-content: center;
+    }
+    .shadow1{
+      background-color: rgb(12, 25, 44);
+      height: 550px;
+      width: 320px;
+      border-radius: 20px;
+    }
+    .shadow2{
+      background-color: rgb(10, 23, 40);
+      height: 515px;
+      width: 290px;
+      display: flex;
+      margin: 15px;
+      justify-content: center;
+      border-radius: 15px;
+    }
+    .nft-display{
+      margin: 10px;
+      background-color: rgb(21, 39, 63);
+      height: 480px;
+      width: 270px;
+      border-radius: 10px;
+      
+      
+      
+    }
+    #nft-img{
+      
+      height: 240px;
+      width: 240px;
+      border-radius: 10px;
+      
+    }
+    .title{
+      margin: 15px;
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+    .description{
+      font-weight: 300;
+      font-size: 14px;
+      color: rgb(157, 146, 184);
+    }
+    .desc2{
+      font-weight: 400;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .footer{
+      font-weight: 300;
+      font-size: 14px;
+    }
+    .preview{
+      height: 240px;
+      width: 240px;
+      background-color: aliceblue;
+      position: absolute;
+      border-radius: 10px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .preview:hover{
+      opacity: 50%;
+    }
+    #view{
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 1;
+      position: absolute;
+      margin-top: -110px;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <img src="images/icon-view.svg" id="view" >
+    <div class="shadow1">
+      <div class="shadow2">
+        <div class="nft-display">
+          <div class="title">
+            <div class="preview">
+              
+            </div>
+           
+            <img src="images/image-equilibrium.jpg" id ="nft-img" alt="" >
+         
+          <br>
+          <br>
+            Equilibrium #3429
+            <div class="description">
+              <br>
+              Our Equilibrium collection promotes balance and calm.
+              
+            </div>
+            <br>
+            <div class="desc2">
+              <div id="right">
+                <img src="images/icon-ethereum.svg" alt="" style="height: 11px; width: 8.5px; padding-right: 3px;"> 0.041ETH
+              </div>
+              
+              <div id="left">
+                <img src="images/icon-clock.svg" style="height: 12.5px; padding-right: 3px;" alt=""> 3 days left
+              </div>
+              
+          </div>
+          <br>
+          <hr style="width: 230px; opacity: 9%;">
+          <div class="footer">
+            <img src="images/image-avatar.png" style="float: left; height: 22px; border: 1px white solid; border-radius: 11px; margin-right: 15px;" alt=""> <p style="height: 12px; opacity: 50%;">Creation by <b>Jules Wyvern</b></p> 
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+  <script>
+    document.querySelector(".preview").addEventListener("mouseleave",function(){
+      console.log("mouseleave")
+      document.querySelector("#view").style.opacity="0";
+    });
+    document.querySelector(".preview").addEventListener("mouseenter",function(){
+      console.log("mouseenter")
+      document.querySelector("#view").style.opacity="100%";
+    });
+    
+  </script>
+
+</body>
+</html>
